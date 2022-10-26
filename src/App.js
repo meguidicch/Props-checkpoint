@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Profiljs from "./profil/profil"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+  var fullname = "asma meguidich"
+  var Bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  var Profession = "infographiste"
+  
+  const handleAlert=(a)=>{
+    alert(`Hello ${a}`)
+  }
+
+  return(
+    <div>
+        <Profiljs fullname={fullname} Bio={Bio} Profession={Profession} handleAlert={handleAlert}>
+        <img src='/developpeur-web.jpg' alt='web' width="300px"/>
+        </Profiljs>
+        
     </div>
-  );
+  )
 }
 
-export default App;
+
+export default App
